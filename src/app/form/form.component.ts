@@ -105,7 +105,7 @@ export class FormComponent {
         'Access-Control-Allow-Origin': '*'
       }
     })
-    const json = await result.json();
+    const json: receivingObject = await result.json();
     if(json?.message) {
       this.error_message = json?.message;
       this.clearErrorMessage();
@@ -150,4 +150,16 @@ export class FormComponent {
       this.error_message = '';
     }, 5000)
   }
+}
+
+interface receivingObject {
+  data: dataObject,
+  stored?: boolean,
+  message?: string
+}
+
+interface dataObject {
+  url: string,
+  depth: number,
+  scraped_data: Array<Object>
 }
