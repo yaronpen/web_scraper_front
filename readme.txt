@@ -1,8 +1,9 @@
 Instructions for setting up this solution:
 Back end:
 Clone from Github.
+https://github.com/yaronpen/web_scraper_back
 Open a terminal, navigate to project's folder and enter 'composer install', afterwards, set up your .env file (I didn't upload mine out of security reasons).
-I assume you already have MongoDB and PHP installed and modified for this set up
+I assume you already have MongoDB and PHP installed and modified for this set up. Please create a MongoDB database with the name "web_scraper".
 Please write in the terminal 'php artisan serve'. That's it, the back end is up.
 If you want to test the back end with Postman, the requests will look like this:
 {
@@ -10,9 +11,11 @@ If you want to test the back end with Postman, the requests will look like this:
 	"depth": <number>
 }
 The http method for this request is post, if you want to update an existing record, the request looks exactly the same, only the method is put.
+The project will be accessible from this address: http://127.0.0.1:8000/api/
 
 Front:
 Clone from Github
+https://github.com/yaronpen/web_scraper_front/
 Open a terminal, navigate to project's folder and press 'npm install'. If you wish to run the development version, write 'npm run start', open a web browser and navigate to this address:
 http://localhost:4200/
 
