@@ -81,7 +81,7 @@ export class FormComponent {
   async logForm(event: SubmitEvent): Promise<void> {
     event.preventDefault();
     
-    const valdation_result = await this.performValidations(/*url_validation, this.depth*/);
+    const valdation_result = await this.performValidations();
     if(valdation_result === false) {
       this.clearErrorMessage();
       return;
@@ -124,7 +124,7 @@ export class FormComponent {
     }
   }
 
-  async performValidations(/*scrape_url: string, depth: number*/) {
+  async performValidations() {
     const url_validation = await this.urlValidation(this.scrape_url);
     let validation_flag = true;
 
